@@ -32,7 +32,7 @@ namespace TTClothesStoreApp.Controllers
             _storeService.Add(store);
         }
 
-        [HttpGet("Delete")]
+        [HttpDelete("Delete")]
         public void Delete(int id)
         {
             _storeService.Delete(id);

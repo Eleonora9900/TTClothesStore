@@ -4,8 +4,11 @@ using TTClothesStore_Models.Models;
 
 namespace TTClothesStoreApp.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class ItemController : ControllerBase
     {
+
         private readonly IItemService _itemService;
 
         public ItemController(IItemService itemService)
@@ -31,7 +34,7 @@ namespace TTClothesStoreApp.Controllers
             _itemService.Add(item);
         }
 
-        [HttpGet("Delete")]
+        [HttpDelete("Delete")]
         public void Delete(int id)
         {
             _itemService.Delete(id);

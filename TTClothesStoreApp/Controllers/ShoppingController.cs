@@ -5,6 +5,8 @@ using TTClothesStore_Models.Response;
 
 namespace TTClothesStoreApp.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class ShoppingController : ControllerBase
     {
         private readonly IShoppingService _shoppingService;
