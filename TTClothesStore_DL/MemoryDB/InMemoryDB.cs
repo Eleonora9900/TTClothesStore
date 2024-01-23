@@ -67,6 +67,15 @@ namespace TTClothesStore_DL.MemoryDB
             },
             new Item()
             {
+                Id = 1756,
+                Type = "Dress",
+                Season = "Summer",
+                Colour = "30415",
+                IsAvalible = true,
+                StoreId = 9201
+            },
+            new Item()
+            {
                 Id = 00222,
                 Type = "Trousers",
                 Season = "Spring",

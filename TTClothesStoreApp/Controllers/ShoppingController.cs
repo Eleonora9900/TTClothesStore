@@ -19,5 +19,11 @@ namespace TTClothesStoreApp.Controllers
         {
             return _shoppingService.GetAllItemsByShopId(request);
         }
+
+        [HttpPost("GetAllAvailableItemsForShop")]
+        public GetAllAvailableItemsForShopResponse GetAvailableItemsForShopId(GetAllAvailableItemsForShopRequest request)
+        {
+            return _shoppingService.GetAvailableItemsForShopId(request);
+        }
     }
 }

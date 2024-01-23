@@ -27,6 +27,11 @@ namespace TTClothesStore_DL.Repositories
             return InMemoryDB.ItemData;
         }
 
+        public List<Item> GetAllAvailableItemsForShop(int shopId)
+        {
+            return InMemoryDB.ItemData.Where(i => i.StoreId == shopId && i.IsAvalible == true).ToList();
+        }
+
         public List<Item> GetAllByShopId(int shopId)
         {
             return InMemoryDB.ItemData.Where(i => i.StoreId == shopId).ToList();

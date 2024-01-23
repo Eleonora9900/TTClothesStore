@@ -11,5 +11,6 @@ namespace TTClothesStore_DL.Interfaces
         void Add(Item item);
         void Delete(int id);
         List<Item> GetAllByShopId(int shopId);
+        List<Item> GetAllAvailableItemsForShop(int shopId); 
     }
 }
