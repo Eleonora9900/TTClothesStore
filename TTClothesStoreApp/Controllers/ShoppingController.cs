@@ -25,5 +25,13 @@ namespace TTClothesStoreApp.Controllers
         {
             return _shoppingService.GetAvailableItemsForShopId(request);
         }
+
+        [HttpPost("TestEndPoint")]
+        public string TestEndPoint([FromBody]
+
+            GetAllItemsByShopIdRequest request)
+        {
+            return "Ok";
+        }
     }
 }
