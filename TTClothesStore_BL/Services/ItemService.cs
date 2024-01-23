@@ -31,6 +31,11 @@ namespace TTClothesStore_BL.Services
             return _itemRepository.GetAll();
         }
 
+        public List<Item> GetAllAvailableItemsForShop(int shopId)
+        {
+            return _itemRepository.GetAllAvailableItemsForShop(shopId);
+        }
+
         public List<Item> GetAllByShopId(int shopId)
         {
             return _itemRepository.GetAllByShopId(shopId);

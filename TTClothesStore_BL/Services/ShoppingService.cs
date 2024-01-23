@@ -26,5 +26,13 @@ namespace TTClothesStore_BL.Services
             result.Items = _itemService.GetAllByShopId(request.ShopId);
             return result;
         }
+
+        public GetAllAvailableItemsForShopResponse GetAvailableItemsForShopId(GetAllAvailableItemsForShopRequest request)
+        {
+            var result = new GetAllAvailableItemsForShopResponse();
+            result.Store = _storeService.GetById(request.shopId);
+            result.Items = _itemService.GetAllAvailableItemsForShop(request.shopId);
+            return result;
+        }
     }
 }

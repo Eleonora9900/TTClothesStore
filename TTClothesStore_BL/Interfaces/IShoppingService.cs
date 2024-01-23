@@ -12,5 +12,10 @@ namespace TTClothesStore_BL.Interfaces
     {
         public GetAllItemsByShopIdResponse
             GetAllItemsByShopId(GetAllItemsByShopIdRequest request);
+
+        public GetAllAvailableItemsForShopResponse
+            GetAvailableItemsForShopId(GetAllAvailableItemsForShopRequest request);
     }
+
+
 }
