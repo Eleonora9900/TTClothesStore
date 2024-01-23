@@ -14,4 +14,5 @@ namespace TTClothesStoreApp.Validators
                 .GreaterThan(0).WithMessage("> 0");
         }
     }
+
 }
