@@ -15,7 +15,10 @@ namespace TTClothesStore_BL.Interfaces
 
         public GetAllAvailableItemsForShopResponse
             GetAvailableItemsForShopId(GetAllAvailableItemsForShopRequest request);
+
+        int CheckItemCount(int input);
     }
+
 
 
 }
