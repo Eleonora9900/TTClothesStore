@@ -19,6 +19,13 @@ namespace TTClothesStore_BL.Services
             _itemService = itemService;
             _storeService = storeService;
         }
+
+        public int CheckItemCount(int input)
+        {
+            var itemCount = _itemService.GetAll();
+            return itemCount.Count + input;
+        }
+
         public GetAllItemsByShopIdResponse GetAllItemsByShopId(GetAllItemsByShopIdRequest request)
         {
             var result = new GetAllItemsByShopIdResponse();

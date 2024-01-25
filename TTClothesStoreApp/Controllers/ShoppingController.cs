@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TTClothesStore_BL.Interfaces;
+using TTClothesStore_Models.CustomExceptions;
 using TTClothesStore_Models.Request;
 using TTClothesStore_Models.Response;
 
@@ -19,7 +20,7 @@ namespace TTClothesStoreApp.Controllers
         [HttpPost("GetAllItemsByShopId")]
         public GetAllItemsByShopIdResponse GetAllItemsByShopId(GetAllItemsByShopIdRequest request)
         {
-            return _shoppingService.GetAllItemsByShopId(request);
+                return _shoppingService.GetAllItemsByShopId(request);
         }
 
         [HttpPost("GetAllAvailableItemsForShop")]

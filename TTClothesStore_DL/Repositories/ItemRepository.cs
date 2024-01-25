@@ -1,7 +1,10 @@
 ﻿
 
+using Castle.Core.Logging;
+using System.Diagnostics.Metrics;
 using TTClothesStore_DL.Interfaces;
 using TTClothesStore_DL.MemoryDB;
+using TTClothesStore_Models.CustomExceptions;
 using TTClothesStore_Models.Models;
 
 namespace TTClothesStore_DL.Repositories
@@ -34,7 +37,15 @@ namespace TTClothesStore_DL.Repositories
 
         public List<Item> GetAllByShopId(int shopId)
         {
-            return InMemoryDB.ItemData.Where(i => i.StoreId == shopId).ToList();
+            try 
+            {
+                return InMemoryDB.ItemData.Where(i => i.StoreId == shopId).ToList();
+            }
+            catch (ShopIdNotFoundException) 
+            {
+                throw new ShopIdNotFoundException("Shop Id not found");
+            }
+        
         }
 
         public Item? GetById(int id)
